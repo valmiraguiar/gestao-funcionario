@@ -12,10 +12,12 @@ import model.Funcionario;
  *
  * @author Valmir Aguiar
  */
-public class CalculadoraBonusRuim implements ICalculadoraBonus{
+public class BonusPorNumeroDeFilhos implements ICalculadoraBonus {
 
     @Override
     public void calculaBonus(Funcionario funcionario) {
-        funcionario.addBonus(new Bonus("RUIM", (funcionario.getSalarioBase() * 1) - funcionario.getSalarioBase()));
-    }    
+        double bonus = (funcionario.getSalarioBase() * (funcionario.getNumeroDeFilhos() / 100)) - funcionario.getSalarioBase();
+        funcionario.addBonus(new Bonus("Bonus por filho", bonus));
+    }
+
 }

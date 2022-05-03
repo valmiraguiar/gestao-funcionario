@@ -32,5 +32,14 @@ public class Bonus {
     public void setValor(double valor) {
         this.valor = valor;
     }
+
+    @Override
+    public String toString() {
+        return "Bonus{" + 
+                "\ntipo=" + tipo + 
+                ", valor=" + valor + "}";
+    }
+    
+    
     
 }

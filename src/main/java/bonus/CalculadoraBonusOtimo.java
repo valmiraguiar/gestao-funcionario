@@ -16,6 +16,6 @@ public class CalculadoraBonusOtimo implements ICalculadoraBonus{
 
     @Override
     public void calculaBonus(Funcionario funcionario) {
-        funcionario.setBonus(new Bonus("ÓTIMO", funcionario.getSalarioBase() * 1.1));
+        funcionario.addBonus(new Bonus("ÓTIMO", (funcionario.getSalarioBase() * 1.1) - funcionario.getSalarioBase()));
     }    
 }

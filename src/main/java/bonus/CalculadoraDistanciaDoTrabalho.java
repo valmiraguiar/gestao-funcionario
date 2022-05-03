@@ -17,11 +17,11 @@ public class CalculadoraDistanciaDoTrabalho implements ICalculadoraBonus{
     @Override
     public void calculaBonus(Funcionario funcionario) {
         if(funcionario.getDistanciaDoTrabalho() <= 50.0){
-            funcionario.setBonus(new Bonus("DistânciaAté50Km", 50.0));
+            funcionario.addBonus(new Bonus("DistânciaAté50Km", 50.0));
         } else if(funcionario.getDistanciaDoTrabalho() <= 100.0) {
-            funcionario.setBonus(new Bonus("DistânciaAté100Km", 90.0));
+            funcionario.addBonus(new Bonus("DistânciaAté100Km", 90.0));
         } else if(funcionario.getDistanciaDoTrabalho() > 100.0) {
-            funcionario.setBonus(new Bonus("DistânciaMaisDe100Km", 150.0));
+            funcionario.addBonus(new Bonus("DistânciaMaisDe100Km", 150.0));
         }
     }
 }

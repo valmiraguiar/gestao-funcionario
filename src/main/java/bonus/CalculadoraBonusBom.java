@@ -17,6 +17,6 @@ public class CalculadoraBonusBom implements ICalculadoraBonus{
     //Bonus de 5%
     @Override
     public void calculaBonus(Funcionario funcionario) {
-        funcionario.setBonus(new Bonus("BOM", funcionario.getSalarioBase() * 1.05));
+        funcionario.addBonus(new Bonus("BOM", (funcionario.getSalarioBase() * 1.05) - funcionario.getSalarioBase()));
     }    
 }
